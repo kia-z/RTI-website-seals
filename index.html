@@ -139,19 +139,19 @@ document.getElementById("seals").addEventListener("click",function(e) {
         if(e.target && e.target.nodeName == "LI") {
         // console.log(e.target.id);
         current = e.target.id;
-		var repo = "https://github.com/kia-z/RTI-website-seals/tree/objects";
+		var repo = "https://github.com/kia-z/RTI-website-seals/blob/main";
 		var seal = `${repo}/rti_${current}`;
 		// console.log(seal) 
 
 		// variables needed for each object in viewer
- 		plane0tzi = `/${seal}/plane_0.tzi`
- 		plane0dzi = `/${seal}/plane_0.dzi`
- 		planes = `/${seal}/planes.tzi`
- 		plane0jpg = `/${seal}/plane_0.jpg`
- 		normalstzi = `/${seal}/normals.tzi`
- 		normalsdzi = `/${seal}/normals.dzi`
- 		normalsjpg = `/${seal}/normals.jpg`
- 		infojson = `/${seal}/info.json`
+ 		plane0tzi = `${seal}/plane_0.tzi`
+ 		plane0dzi = `${seal}/plane_0.dzi`
+ 		planes = `${seal}/planes.tzi`
+ 		plane0jpg = `${seal}/plane_0.jpg`
+ 		normalstzi = `${seal}/normals.tzi`
+ 		normalsdzi = `${seal}/normals.dzi`
+ 		normalsjpg = `${seal}/normals.jpg`
+ 		infojson = `${seal}/info.json`
 
 //autodetect type:
 async function autodetect() {
