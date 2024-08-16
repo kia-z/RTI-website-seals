@@ -124,6 +124,7 @@ html, body {
 //variables for seal selection
 var seal;
 var current;
+var repo;
 
 var plane0tzi;
 var plane0dzi;
@@ -138,7 +139,8 @@ document.getElementById("seals").addEventListener("click",function(e) {
         if(e.target && e.target.nodeName == "LI") {
         // console.log(e.target.id);
         current = e.target.id;
-		var seal = `rti_${current}`
+		var repo = `https://github.com/kia-z/RTI-website-seals/blob/main`
+		var seal = `${repo}/rti_${current}`;
 		// console.log(seal) 
 
 		// variables needed for each object in viewer
