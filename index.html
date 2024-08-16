@@ -126,11 +126,11 @@ var seal;
 var current;
 var repo;
 
-// var plane0tzi;
+var plane0tzi;
 var plane0dzi;
 var planes;
 var plane0jpg; 
-// var normalstzi; 
+var normalstzi; 
 var normalsdzi;
 var normalsjpg;
 var infojson;
@@ -144,20 +144,20 @@ document.getElementById("seals").addEventListener("click",function(e) {
 		// console.log(seal) 
 
 		// variables needed for each object in viewer
-// 		plane0tzi = `${seal}/plane_0.tzi`
+ 		plane0tzi = `${seal}/plane_0.tzi`
  		plane0dzi = `${seal}/plane_0.dzi`
  		planes = `${seal}/planes.tzi`
  		plane0jpg = `${seal}/plane_0.jpg`
-// 		normalstzi = `${seal}/normals.tzi`
+ 		normalstzi = `${seal}/normals.tzi`
  		normalsdzi = `${seal}/normals.dzi`
  		normalsjpg = `${seal}/normals.jpg`
  		infojson = `${seal}/info.json`
 
 //autodetect type:
 async function autodetect() {
-//	let response = await fetch(plane0tzi);
-//	if(response.status == 200)
-//		return "tarzoom";
+	let response = await fetch(plane0tzi);
+	if(response.status == 200)
+		return "tarzoom";
 
 	response = await fetch(plane0dzi);
 	if(response.status == 200)
@@ -176,11 +176,11 @@ async function autodetect() {
 }
 
 async function autodetectNormals(layout) {
-//	if(layout == 'tarzoom') {
-//		let response = await fetch(normalstzi);
-//		if(response.status == 200)
-//			return true;
-//	}
+	if(layout == 'tarzoom') {
+		let response = await fetch(normalstzi);
+		if(response.status == 200)
+			return true;
+	}
 	if(layout == 'deepzoom') {
 		let response = await fetch(normalsdzi);
 		if(response.status == 200)
