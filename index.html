@@ -63,7 +63,7 @@ html, body {
 </p>
 </div>
 
-<div>
+<div class="container">
 	<div class="row">
 		<!-- choose seal -->
 		<div class="col-md-2">
@@ -138,7 +138,7 @@ document.getElementById("seals").addEventListener("click",function(e) {
         if(e.target && e.target.nodeName == "LI") {
         // console.log(e.target.id);
         current = e.target.id;
-		var seal = `/rti_${current}`
+		var seal = `tree/main/rti_${current}`
 		// console.log(seal) 
 
 		// variables needed for each object in viewer
