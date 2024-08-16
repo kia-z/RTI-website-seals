@@ -135,6 +135,7 @@ var normalsdzi;
 var normalsjpg;
 var infojson;
 
+async function selectObject() {
 document.getElementById("seals").addEventListener("click",function(e) {
         if(e.target && e.target.nodeName == "LI") {
         // console.log(e.target.id);
@@ -152,7 +153,7 @@ document.getElementById("seals").addEventListener("click",function(e) {
  		normalsdzi = `${seal}/normals.dzi`
  		normalsjpg = `${seal}/normals.jpg`
  		infojson = `${seal}/info.json`
-
+		
 //autodetect type:
 async function autodetect() {
 	let response = await fetch(plane0tzi);
@@ -220,6 +221,7 @@ init();
 
 }	
 });
+};
 
 </script>
 
