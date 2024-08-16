@@ -67,6 +67,7 @@ html, body {
 	<div class="row">
 		<!-- choose seal -->
 		<div class="col-md-2">
+			<p>Click on an object number to see it.</p>
 			<ul id="seals">
 			    <li id="062">062</li>
     			<li id="070">070</li>
@@ -137,7 +138,7 @@ document.getElementById("seals").addEventListener("click",function(e) {
         if(e.target && e.target.nodeName == "LI") {
         // console.log(e.target.id);
         current = e.target.id;
-		var seal = `rti_${current}`
+		var seal = `/rti_${current}`
 		// console.log(seal) 
 
 		// variables needed for each object in viewer
